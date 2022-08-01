@@ -35,8 +35,10 @@ CREATE TABLE `protocolo` (
   `statusParecer` varchar(500) DEFAULT NULL,
   `dataDeliberacaoProtocolo` date DEFAULT NULL,
   `statusDeliberacao` varchar(500) DEFAULT NULL,
-  `statusProtocolo` varchar(500) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `statusProtocolo` varchar(500) DEFAULT NULL,
+  `id` smallint NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,6 +47,7 @@ CREATE TABLE `protocolo` (
 
 LOCK TABLES `protocolo` WRITE;
 /*!40000 ALTER TABLE `protocolo` DISABLE KEYS */;
+INSERT INTO `protocolo` VALUES ('2022-07-27','2022-07-27','2022-07-27','Morreu','resumo','death','2022-08-01',NULL,NULL,NULL,NULL,NULL,'Enviado',1),('2022-07-26','2022-07-26','2022-07-26','aaa','sss','ddd','2022-08-01',NULL,NULL,NULL,NULL,NULL,'Enviado',2);
 /*!40000 ALTER TABLE `protocolo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-25 13:58:31
+-- Dump completed on 2022-08-01 14:04:18
