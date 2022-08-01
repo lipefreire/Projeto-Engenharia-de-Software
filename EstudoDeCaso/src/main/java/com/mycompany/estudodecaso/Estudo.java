@@ -1,6 +1,15 @@
 package com.mycompany.estudodecaso;
 
 public class Estudo {
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
     private String dataEmissaoProtocolo;
     private String dataInicioExperimento;
     private String dataFimExperimento;
