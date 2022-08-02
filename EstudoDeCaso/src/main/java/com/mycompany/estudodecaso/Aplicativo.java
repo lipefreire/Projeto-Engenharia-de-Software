@@ -343,8 +343,8 @@ public class Aplicativo extends javax.swing.JFrame {
         Estudo estudo = new Estudo();
         
         estudo.setId(Integer.parseInt(txtId.getText()));
-        estudo.setStatusParecer(txtStatusParecer.getText());
         estudo.setDescricaoParecer(txtDescricaoParecer.getText());
+        estudo.setStatusParecer(txtStatusParecer.getText());
         
         try {
             estudoDAO.emitirParecer(estudo);

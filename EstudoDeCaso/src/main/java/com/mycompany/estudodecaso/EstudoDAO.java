@@ -48,10 +48,10 @@ public class EstudoDAO {
         con = Conexao.conexaoMySQL();
         psts = con.prepareStatement(sql);
         
-        psts.setInt(1, e.getId());
-        psts.setString(2, e.getDescricaoParecer());
-        psts.setString(3, e.getStatusParecer());
-
+        psts.setString(1, e.getDescricaoParecer());
+        psts.setString(2, e.getStatusParecer());
+        psts.setInt(3, e.getId());
+        
         psts.execute();
     }
     
@@ -61,8 +61,8 @@ public class EstudoDAO {
         con = Conexao.conexaoMySQL();
         psts = con.prepareStatement(sql);
         
-        psts.setInt(1, e.getId());
-        psts.setString(2, e.getStatusDeliberacao());
+        psts.setString(1, e.getStatusDeliberacao());
+        psts.setInt(2, e.getId());
         psts.execute();
     }
     
@@ -77,18 +77,18 @@ public class EstudoDAO {
         
         while (rs.next()) {
             e.setId(rs.getInt("id"));
-            e.setDataEmissaoProtocolo(rs.getString(2));
-            e.setDataInicioExperimento(rs.getString(3));
-            e.setDataFimExperimento(rs.getString(4));
-            e.setJustificativaUsoAnimais(rs.getString(5));
-            e.setResumoIngles(rs.getString(6));
-            e.setResumoPortugues(rs.getString(7));
-            e.setDataEmissaoParecer(rs.getString(8));
-            e.setDescricaoParecer(rs.getString(9));
-            e.setDataDeliberacaoProtocolo(rs.getString(10));
-            e.setStatusParecer(rs.getString(11));
-            e.setStatusDeliberacao(rs.getString(12));
-            e.setStatusProtocolo(rs.getString(13));
+            e.setDataEmissaoProtocolo(rs.getString("dataEmissaoProtocolo"));
+            e.setDataInicioExperimento(rs.getString("dataInicioExperimento"));
+            e.setDataFimExperimento(rs.getString("dataFimExperimento"));
+            e.setJustificativaUsoAnimais(rs.getString("JustificativaUsoAnimais"));
+            e.setResumoIngles(rs.getString("resumoIngles"));
+            e.setResumoPortugues(rs.getString("resumoPortugues"));
+            e.setDataEmissaoParecer(rs.getString("dataEmissaoParecer"));
+            e.setDescricaoParecer(rs.getString("descricaoParecer"));
+            e.setDataDeliberacaoProtocolo(rs.getString("dataDeliberacaoProtocolo"));
+            e.setStatusParecer(rs.getString("statusParecer"));
+            e.setStatusDeliberacao(rs.getString("statusDeliberacao"));
+            e.setStatusProtocolo(rs.getString("statusProtocolo"));
         }
         
         rs.close();

@@ -9,7 +9,7 @@ public class Conexao {
         Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(
 				"jdbc:mysql://localhost:3306/projeto",
-				"root","alunoif21");
+				"root","root");
 		return con; 
     }
 }
