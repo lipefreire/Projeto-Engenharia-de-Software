@@ -30,6 +30,9 @@ public class Aplicativo extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
         txtId = new javax.swing.JTextField();
+        emitirParecer = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        txtStatusParecer = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,16 +87,19 @@ public class Aplicativo extends javax.swing.JFrame {
             }
         });
 
+        emitirParecer.setText("Emitir Parecer");
+        emitirParecer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                emitirParecerMouseClicked(evt);
+            }
+        });
+
+        jLabel7.setText("Status Parecer");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(236, 236, 236)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -117,25 +123,39 @@ public class Aplicativo extends javax.swing.JFrame {
                                                 .addComponent(jLabel5)))))
                                 .addGap(31, 31, 31)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtDataEmissao, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtDataInicioExperimento, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtDataFimExperimento, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtJustificativaAnimais, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtResumoPortugues, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtResumoIngles, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtResumoIngles, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtDataEmissao, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(224, 224, 224)
+                                        .addComponent(txtStatusParecer, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(106, 106, 106)
                                 .addComponent(emitir)))
-                        .addGap(0, 414, Short.MAX_VALUE))
+                        .addGap(0, 407, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(enviarParaParecer)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jSeparator1))))
+                                .addGap(322, 322, 322)
+                                .addComponent(emitirParecer)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(413, 413, 413)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel7)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,7 +169,10 @@ public class Aplicativo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jLabel1))
-                    .addComponent(txtDataEmissao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtDataEmissao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7)
+                        .addComponent(txtStatusParecer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -185,7 +208,9 @@ public class Aplicativo extends javax.swing.JFrame {
                 .addGap(3, 3, 3)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(enviarParaParecer)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(enviarParaParecer)
+                    .addComponent(emitirParecer))
                 .addContainerGap(89, Short.MAX_VALUE))
         );
 
@@ -231,6 +256,20 @@ public class Aplicativo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIdActionPerformed
 
+    private void emitirParecerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emitirParecerMouseClicked
+        EstudoDAO estudoDAO = new EstudoDAO();
+        Estudo estudo = new Estudo();
+        
+        estudo.setId(txtId.getText());
+        estudo.setStatusParecer(txtStatusParecer.getText());
+        
+        try {
+            estudoDAO.emitirParecer(estudo);
+        } catch (Exception ex) {
+            Logger.getLogger(Aplicativo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_emitirParecerMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -268,6 +307,7 @@ public class Aplicativo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton emitir;
+    private javax.swing.JButton emitirParecer;
     private javax.swing.JButton enviarParaParecer;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -275,6 +315,7 @@ public class Aplicativo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField txtDataEmissao;
@@ -284,5 +325,6 @@ public class Aplicativo extends javax.swing.JFrame {
     private javax.swing.JTextField txtJustificativaAnimais;
     private javax.swing.JTextField txtResumoIngles;
     private javax.swing.JTextField txtResumoPortugues;
+    private javax.swing.JTextField txtStatusParecer;
     // End of variables declaration//GEN-END:variables
 }

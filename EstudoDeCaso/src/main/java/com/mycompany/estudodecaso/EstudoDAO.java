@@ -38,19 +38,46 @@ public class EstudoDAO {
         con = Conexao.conexaoMySQL();
         psts = con.prepareStatement(sql);
         
-        psts.setString(1, e.getId());
+        psts.setInt(1, e.getId());
         psts.execute();
     }
     
     public void emitirParecer(Estudo e) throws Exception {
+        String sql ="UPDATE protocolo SET statusProtocolo = 'Aguardando Deliberação', statusParecer = ? WHERE id = ?";
+                
+        con = Conexao.conexaoMySQL();
+        psts = con.prepareStatement(sql);
         
+        psts.setInt(1, e.getId());
+        psts.setString(2, e.getStatusParecer());
+        psts.execute();
     }
     
     public void deliberarProtocolo(Estudo e) throws Exception {
         
     }
     
-    public void selecionar(Estudo e) throws Exception {
+    public List<Estudo> selecionar(int id) throws Exception {
+        String sql = "SELECT nome FROM contatos WHERE id = ?";
+        
+        con = Conexao.conexaoMySQL();
+        psts = con.prepareStatement(sql);
+        ResultSet rs = psts.executeQuery();
+        
+        Estudo e = new Estudo();
+        
+        List<Estudo> cont = new ArrayList<>();
+        
+        psts.setInt(1, e.getId());
+        
+        while (rs.next()) {
+            e.setId(rs.getInt("id"));
+            cont.add(e);
+        }
+        psts.execute();
+        rs.close();
+        psts.close();
+        return cont;
         
     }
     
