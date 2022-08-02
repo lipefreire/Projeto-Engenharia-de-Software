@@ -43,18 +43,20 @@ public class EstudoDAO {
     }
     
     public void emitirParecer(Estudo e) throws Exception {
-        String sql ="UPDATE protocolo SET dataEmissaoParecer = curdate(), statusProtocolo = 'Aguardando Deliberação', statusParecer = ? WHERE id = ?";
+        String sql ="UPDATE protocolo SET descricaoParecer = ?, statusParecer = ?, dataEmissaoParecer = curdate(), statusProtocolo = 'Aguardando Deliberação' WHERE id = ?";
                 
         con = Conexao.conexaoMySQL();
         psts = con.prepareStatement(sql);
         
         psts.setInt(1, e.getId());
-        psts.setString(2, e.getStatusParecer());
+        psts.setString(2, e.getDescricaoParecer());
+        psts.setString(3, e.getStatusParecer());
+
         psts.execute();
     }
     
     public void deliberarProtocolo(Estudo e) throws Exception {
-        String sql ="UPDATE protocolo SET statusProtocolo = 'Deliberado', statusDeliberacao = ? WHERE id = ?";
+        String sql ="UPDATE protocolo SET dataDeliberacaoProtocolo = curdate(), statusProtocolo = 'Deliberado', statusDeliberacao = ? WHERE id = ?";
         
         con = Conexao.conexaoMySQL();
         psts = con.prepareStatement(sql);
@@ -81,6 +83,9 @@ public class EstudoDAO {
             e.setJustificativaUsoAnimais(rs.getString(5));
             e.setResumoIngles(rs.getString(6));
             e.setResumoPortugues(rs.getString(7));
+            e.setDataEmissaoParecer(rs.getString(8));
+            e.setDescricaoParecer(rs.getString(9));
+            e.setDataDeliberacaoProtocolo(rs.getString(10));
             e.setStatusParecer(rs.getString(11));
             e.setStatusDeliberacao(rs.getString(12));
             e.setStatusProtocolo(rs.getString(13));
