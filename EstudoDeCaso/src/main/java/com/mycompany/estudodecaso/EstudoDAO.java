@@ -43,7 +43,7 @@ public class EstudoDAO {
     }
     
     public void emitirParecer(Estudo e) throws Exception {
-        String sql ="UPDATE protocolo SET statusProtocolo = 'Aguardando Deliberação', statusParecer = ? WHERE id = ?";
+        String sql ="UPDATE protocolo SET dataEmissaoParecer = curdate(), statusProtocolo = 'Aguardando Deliberação', statusParecer = ? WHERE id = ?";
                 
         con = Conexao.conexaoMySQL();
         psts = con.prepareStatement(sql);
@@ -54,34 +54,41 @@ public class EstudoDAO {
     }
     
     public void deliberarProtocolo(Estudo e) throws Exception {
-        
-    }
-    
-    public List<Estudo> selecionar(int id) throws Exception {
-        String sql = "SELECT nome FROM contatos WHERE id = ?";
+        String sql ="UPDATE protocolo SET statusProtocolo = 'Deliberado', statusDeliberacao = ? WHERE id = ?";
         
         con = Conexao.conexaoMySQL();
         psts = con.prepareStatement(sql);
-        ResultSet rs = psts.executeQuery();
-        
-        Estudo e = new Estudo();
-        
-        List<Estudo> cont = new ArrayList<>();
         
         psts.setInt(1, e.getId());
+        psts.setString(2, e.getStatusDeliberacao());
+        psts.execute();
+    }
+    
+    public Estudo selecionar(int id) throws Exception {
+        String sql = "SELECT * FROM protocolo WHERE id = ?";
+        Estudo e = new Estudo();
+        con = Conexao.conexaoMySQL();
+        psts = con.prepareStatement(sql);
+        psts.setInt(1, id);
+        rs = psts.executeQuery();
+        
         
         while (rs.next()) {
             e.setId(rs.getInt("id"));
-            cont.add(e);
+            e.setDataEmissaoProtocolo(rs.getString(2));
+            e.setDataInicioExperimento(rs.getString(3));
+            e.setDataFimExperimento(rs.getString(4));
+            e.setJustificativaUsoAnimais(rs.getString(5));
+            e.setResumoIngles(rs.getString(6));
+            e.setResumoPortugues(rs.getString(7));
+            e.setStatusParecer(rs.getString(11));
+            e.setStatusDeliberacao(rs.getString(12));
+            e.setStatusProtocolo(rs.getString(13));
         }
-        psts.execute();
+        
         rs.close();
         psts.close();
-        return cont;
-        
-    }
-    
-    public void obterPercentualParecer(Estudo e) throws Exception {
+        return e;
         
     }
     

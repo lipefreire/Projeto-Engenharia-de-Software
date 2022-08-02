@@ -29,48 +29,69 @@
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtDataInicioExperimento" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="txtDataFimExperimento" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="txtJustificativaAnimais" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="txtResumoPortugues" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="txtResumoIngles" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="txtDataEmissao" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
-                                      <Component id="txtStatusParecer" min="-2" pref="125" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                               <Component id="emitir" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="395" max="-2" attributes="0"/>
+                                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtId" min="-2" pref="77" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="txtJustificativaAnimais" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <Component id="txtResumoPortugues" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <Component id="txtResumoIngles" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="txtDataInicioExperimento" min="-2" pref="150" max="-2" attributes="0"/>
+                                                      <Component id="txtDataEmissao" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="txtDataFimExperimento" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="335" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="txtStatusProtocolo" max="32767" attributes="0"/>
+                                          <Component id="txtStatusParecer" pref="125" max="32767" attributes="0"/>
+                                          <Component id="txtStatusDeliberacao" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace min="0" pref="407" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="230" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -79,37 +100,38 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               <Component id="enviarParaParecer" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="322" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                               <Component id="emitirParecer" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="txtDeliberar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="413" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtId" min="-2" pref="77" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtId" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtId" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
@@ -117,8 +139,8 @@
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtDataEmissao" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtStatusParecer" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
@@ -127,7 +149,11 @@
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="txtDataInicioExperimento" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtDataInicioExperimento" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtStatusProtocolo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -135,7 +161,11 @@
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="txtDataFimExperimento" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtDataFimExperimento" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtStatusDeliberacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -169,8 +199,10 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="enviarParaParecer" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="emitirParecer" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtDeliberar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="89" max="32767" attributes="0"/>
+              <EmptySpace pref="101" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -275,10 +307,45 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Status Parecer"/>
+        <Property name="text" type="java.lang.String" value="STATUS"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtStatusParecer">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Selecionar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Parecer"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtStatusProtocolo">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Protocolo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtStatusDeliberacao">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel11">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delibera&#xe7;&#xe3;o"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="txtDeliberar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Deliberar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtDeliberarMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
